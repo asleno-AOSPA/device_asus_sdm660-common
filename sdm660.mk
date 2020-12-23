@@ -264,7 +264,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ParanoidDoze
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sensor.proximity=true \
     ro.sensor.pickup=asus.sensor.pickup
 
