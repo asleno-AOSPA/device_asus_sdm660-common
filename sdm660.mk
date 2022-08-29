@@ -16,7 +16,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.adm.buffering.ms=6 \
     vendor.audio_hal.period_multiplier=2
 
@@ -37,7 +37,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
     vendor.qti.hardware.fm@1.0.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.service.bdroid.sibs=false \
     persist.vendor.bt.aac_frm_ctl.enabled=true \
     persist.vendor.qcom.bluetooth.soc=cherokee \
@@ -68,7 +68,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     libxml2
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.eis.enable=1 \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.is_type=5 \
@@ -91,7 +91,7 @@ PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.1.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
     debug.stagefright.omx_default_rank=0
 
@@ -134,7 +134,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=1 \
@@ -156,7 +156,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.4-service.clearkey
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
 
 # Fingerprint
@@ -165,7 +165,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
 
 # FRP
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # GMS
@@ -346,7 +346,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.fflag.override.settings_provider_model=false \
     ro.telephony.default_network=20,20
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
@@ -378,7 +378,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.sensors.sta_detect=true \
     ro.vendor.qti.sensors.mot_detect=true
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.qti.sdk.sensors.gestures=false \
     ro.vendor.qti.sensors.cmc=false \
     ro.vendor.qti.sensors.facing=false
@@ -390,7 +390,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
 # SoC Information
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.model=SDM660 \
     ro.soc.manufacturer=QTI
 
@@ -398,7 +398,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # SurfaceFlinger
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.use_phase_offsets_as_durations=1 \
     debug.sf.late.sf.duration=10500000 \
     debug.sf.late.app.duration=16600000 \
@@ -417,14 +417,14 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.timed.enable=true
 
 # UBWC
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.video.disable.ubwc=1
 
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.usb.config=diag,serial_cdev,rmnet,adb
 
 # FIXME: master: compat for libprotobuf
