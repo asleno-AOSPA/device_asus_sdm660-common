@@ -11,7 +11,3 @@ persist.vendor.runin.fp                       u:object_r:vendor_fingerprint_prop
 
 # NFC
 ro.hq.support.nfc                             u:object_r:nfc_sensors_prop:s0
-
-# PASR
-vendor.pasr.                                  u:object_r:vendor_pasr_prop:s0
-ro.vendor.pasr.                               u:object_r:vendor_pasr_prop:s0
