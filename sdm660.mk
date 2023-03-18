@@ -8,10 +8,6 @@
 PRODUCT_PACKAGES += \
     fs_config_files
 
-# ANT+
-PRODUCT_PACKAGES += \
-    com.dsi.ant@1.0.vendor
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -26,16 +22,8 @@ TARGET_BOARD_PLATFORM := sdm660
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.a2dp@1.0-impl \
-    android.hardware.bluetooth.audio@2.1-impl \
-    audio.bluetooth.default \
-    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
-    libbluetooth_audio_session \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor \
-    vendor.qti.hardware.fm@1.0.vendor
+    libbluetooth_audio_session
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.service.bdroid.sibs=false \
@@ -47,11 +35,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     bt.max.hfpclient.connections=1 \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
     persist.bluetooth.a2dp_offload.disabled=false \
-    persist.vendor.bt.a2dp.aac_whitelist=false \
     persist.vendor.qcom.bluetooth.enable.splita2dp=true \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
     ro.bluetooth.a2dp_offload.supported=true \
-    ro.bluetooth.library_name=libbluetooth_qti.so \
     vendor.bluetooth.soc=cherokee
 
 # Camera
@@ -102,8 +88,6 @@ PRODUCT_PACKAGES += \
 # Data Modules
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.data.df.dev_name=rmnet_usb0
-    persist.vendor.data.mode=concurrent \
-    ro.vendor.use_data_netmgrd=true
 
 # Dalvik vm configuration
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
@@ -223,8 +207,7 @@ TARGET_KERNEL_VERSION := 4.19
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0.vendor \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.keymaster@3.0.vendor
 
 # Media
 PRODUCT_PACKAGES += \
@@ -253,10 +236,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 TARGET_NFC_SKU := NFC
 
-# Net
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
-
 # Netflix
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.netflix.bsp_rev=Q660-13149-1
@@ -264,10 +243,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Neuralnetworks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
-
-# NTP Server
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.backup.ntpServer=0.pool.ntp.org
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -299,14 +274,11 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
@@ -314,14 +286,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.vr.high_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vr.high_performance.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # QNS
@@ -329,22 +295,33 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor
 
 # QTI Common Components
-TARGET_COMMON_QTI_COMPONENTS += all
+TARGET_COMMON_QTI_COMPONENTS += \
+    adreno \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    media \
+    nfc \
+    overlay \
+    perf \
+    telephony \
+    usb \
+    vibrator \
+    wfd \
+    wlan
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.6.vendor \
     android.hardware.secure_element@1.1 \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
     librmnetctl \
     libprotobuf-cpp-full
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.radio.VT_CAM_INTERFACE=2 \
-    persist.sys.fflag.override.settings_provider_model=false \
-    ro.telephony.default_network=20,20
+    persist.sys.fflag.override.settings_provider_model=false
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.atfwd.start=true \
