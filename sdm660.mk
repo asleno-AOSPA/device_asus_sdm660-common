@@ -116,7 +116,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
-    debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=1 \
     debug.sf.recomputecrop=0 \
     persist.hwc.mdpcomp.enable=true \
@@ -312,6 +311,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.1 \
+    android.hardware.secure_element@1.2 \
     librmnetctl \
     libprotobuf-cpp-full
 
@@ -359,8 +359,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Service Tracker
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2-impl \
-    vendor.qti.hardware.servicetracker@1.2-service \
-    vendor.qti.hardware.servicetracker@1.2.vendor
+    vendor.qti.hardware.servicetracker@1.2-service
 
 # SoC Information
 PRODUCT_VENDOR_PROPERTIES += \

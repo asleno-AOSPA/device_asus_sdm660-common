@@ -408,7 +408,6 @@ vendor/lib64/libtinyxml.so|da9f11e9edc92bb6d5e8f64f4fbbaf8019b8587a
 
 # Graphics (HDR) - from LA.UM.10.2.1.r1-03400-sdm660.0
 vendor/lib/libhdr_tm.so|a2292af314f9fa86b9ec2bb11ad72bf85e959842
-vendor/lib64/libhdr_tm.so|a1b9bbad12217e6b79951774801aa54be6460fd6
 
 # Graphics (Post Processing) - from LA.UM.10.2.1.r1-03400-sdm660.0
 vendor/bin/hw/vendor.display.color@1.0-service|815cc36f3722fbfb5fdd52f6678309d207888038
@@ -425,18 +424,7 @@ vendor/lib64/vendor.display.color@1.2.so|56ad6991270d7c27d8a4ee00f16a9d64e0a1f54
 vendor/lib64/vendor.display.postproc@1.0.so|fda412bf79f5ff9d2e46b137c4b6b4ceead7512f
 
 # Graphics (SDM) - from LA.UM.10.2.1.r1-03400-sdm660.0
-vendor/lib/libqseed3.so|1a67e4c3e7d904dc3d3af35c0f516fe13ed88bcb
-vendor/lib/libsdm-color.so|43bfdb63147740a728e704b35c659301bca7ede2
-vendor/lib/libsdm-diag.so|a2b532158e12562e1fb74695bf829de1b94c2cde
--vendor/lib/libsdm-disp-vndapis.so|efe67908e419b8db34068896c9b45cdf9b4e535b
 vendor/lib/libsdmextension.so|499d9b9be4fb53b2410f65976ea94f2c154b9f11
-vendor/lib/libtinyxml2_1.so|aec76b36890b163f9cf1be594d6b082887f0a9b2
-vendor/lib64/libqseed3.so|a858c83fb38ef7acd21ea0a23f36ef22ba8c06ef
-vendor/lib64/libsdm-color.so|69cea5fdff6c3ef05a17390b9031d9e0054bc2ad
-vendor/lib64/libsdm-diag.so|2ba98c20d05e34501a4423f55bec4da3f27711ad
--vendor/lib64/libsdm-disp-vndapis.so|8e92d1f17735c26658c17148da6e1882b5bc6fb0
-vendor/lib64/libsdmextension.so|2d7469450bfaadb304a8080e384f72601442d078
-vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
 # IMS - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/ims_rtp_daemon|66ca2f2c1888d7d4fb2eb97554fc4966246058a2
@@ -517,10 +505,6 @@ lib/libFileMux.so|22005fb1595b2b76e199b82ff3790c1bc3d54a20
 lib/libOmxMux.so|66ccc804301bccfbd17afb39a60131dd1a3fa9bc
 lib64/libFileMux.so|8b31ad6706780a8e5225817d8bf8b683ba1523c5
 lib64/libOmxMux.so|3c2fef1fc174bd93ebdc4cbeca9c4acc3731222e
-system_ext/lib/libmmosal.so|d485ea00eea93f22f3bb9738c24f52711399689f
-system_ext/lib/libmmparser_lite.so|7264378fe6f12ef8a66d8ce1d970dcf1664b6e2d
-system_ext/lib64/libmmosal.so|6962f780fbba52f4c057e05f4ccadccadf4e690f
-system_ext/lib64/libmmparser_lite.so|a146ac76b5919cbe5d4e635c63e83ec74168d7d1
 vendor/lib/libAlacSwDec.so|3a6d7dae2808dbe111ff4449b4e1e82560466ef3
 vendor/lib/libApeSwDec.so|ff14ad2ebbabcd89278830d817e9aa6bdcb1799a
 vendor/lib/libFlacSwDec.so|707dbc6b5d2890dc3bba22c00b372f0973baebda
@@ -536,7 +520,6 @@ vendor/lib/libOmxDsdDec.so|d265762dfc714d51379a27970b05f325dbe412da
 vendor/lib/libOmxEvrcDec.so|28b401779d9ee45b0e94415faf9ac34c6fd200f0
 vendor/lib/libOmxG711Dec.so|c952f9d05cf465f622aa00f9640f616c3f2a2a40
 vendor/lib/libOmxQcelp13Dec.so|ee6ede27923f04f4bb03b101bbf302e4df782945
-vendor/lib/libOmxVideoDSMode.so|84c632ef31c4dd88c5e08f92ba02e3f29df09b35
 vendor/lib/libOmxWmaDec.so|a664af6f1be984747ce5101881696e126ca3e098
 vendor/lib/libdsd2pcm.so|f9d2f26315764c27137bc375bb85b20fabe66ff9
 vendor/lib/libmm-color-convertor.so|063b3772fb4c5b85877c35a50e667540cde0c7d6
@@ -710,7 +693,6 @@ vendor/lib64/libqmi_encdec.so|ff9a6ea2e08036e83b9089e32afda0d19cbe08bd
 vendor/lib64/libqmi_legacy.so|03289e1b13333d96d2b8c118a541189b4a4d840f
 vendor/lib64/libqmiextservices.so|b15aa1f1c1918f27a90db2c7289b3978eff9cca7
 vendor/lib64/libqmiservices.so|050011bdba72473f64cc245bda6b1911856ad3c5
-vendor/lib64/libqrtr.so|e17333fe1ca323e487ddfa714d5d5b38772b2ac6
 vendor/lib64/libqsocket.so|33b007b455cd9bc6897d737a5a325570ee630ff0
 vendor/lib64/libsmemlog.so|ff9ef200029d21b8dd93eca663f120d07be0e3d9
 vendor/lib64/libsystem_health_mon.so|9b13ab7123f78ad044e5dd75f14dc7a4ae8267f3
@@ -722,13 +704,6 @@ vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so|6b3246eaacad1ef332e3deb1c9
 vendor/lib/vendor.qti.hardware.qseecom@1.0.so|ba96362cc5d0cc857fcb9f0b0992101a39340f71
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|c76c8b6856cd1800fd170c85f38474ce4d2ac095
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|c40ad19569676878f6bac09b18fff119c8f6f68b
-
-# QSPM HAL - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/vendor.qti.qspmhal@1.0-service|ac1c898683786dba373e76d63e31b62e138c1695
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc|bdc5cbedd1688807409c72262824ca9162b20239
-vendor/etc/seccomp_policy/qspm.policy|943dd12bd4ae7cb0037b2e246143d76bb1787257
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|96904e353acd05c4a56afd861d913f30809af7b4
-vendor/lib64/vendor.qti.qspmhal@1.0.so|162278a49e1d11e1d34634bc1b913b6d6764db1d
 
 # RemoteFS - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/rmt_storage|ea511ef474ca59c44d928581288cb2bae9f37cc8
@@ -824,9 +799,5 @@ vendor/etc/init/tloc_daemon.rc|9dd38e92847bc34f8a3228f4cd81ef14b6e89785
 
 # Universal Bandwidth Compression (UBWC) - from LA.UM.10.2.1.r1-03400-sdm660.0
 vendor/lib/libUBWC.so|7269f5e1c914d36f995517c55632a6ae18229a9a
-vendor/lib/libstreamparser.so|3dacaede7656beaca862b995b88d3d8b40f50116
 vendor/lib64/libUBWC.so|0da520fc45ca290fc66d1878149b63e7e41ad0a3
 vendor/lib64/libstreamparser.so|c4ee3b6372c38d9384779fd1eedf9d796d65fa70
-
-# WiFi - from LA.UM.10.2.1.r1-03400-sdm660.0
-vendor/bin/cnss-daemon|30f60aee128a6ba8c3e9c140b792529e824441c0
