@@ -60,9 +60,9 @@ LOC_HIDL_VERSION := 4.0
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/vintf/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(COMMON_PATH)/configs/vintf/device_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/device_framework_compatibility_matrix.xml
 
-ODM_MANIFEST_SKUS += NFC
+ODM_MANIFEST_SKUS := NFC
 ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/configs/vintf/manifest-nfc.xml
 
 # Kernel
@@ -76,12 +76,12 @@ BOARD_KERNEL_CMDLINE := \
 	ehci-hcd.park=3 \
 	service_locator.enable=1 \
 	loop.max_part=7
-BOARD_KERNEL_BASE         += 0x00000000
-BOARD_KERNEL_PAGESIZE     += 4096
-BOARD_KERNEL_IMAGE_NAME   += Image.gz-dtb
-KERNEL_CUSTOM_LLVM 	  += true
-KERNEL_FULL_LLVM          := true
-KERNEL_SD_LLVM_SUPPORT    += true
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+KERNEL_CUSTOM_LLVM := true
+KERNEL_FULL_LLVM := true
+KERNEL_SD_LLVM_SUPPORT := true
 
 # Libinit
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sdm660
@@ -121,8 +121,8 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_asus
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy/private
 
 # Symlinks
 TARGET_MOUNT_POINTS_SYMLINKS := true
