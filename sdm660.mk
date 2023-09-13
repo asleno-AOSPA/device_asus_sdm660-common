@@ -298,23 +298,7 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor
 
 # QTI Common Components
-TARGET_COMMON_QTI_COMPONENTS += \
-    adreno \
-    audio \
-    av \
-    bt \
-    display \
-    gps \
-    init \
-    media \
-    nfc \
-    overlay \
-    perf \
-    telephony \
-    usb \
-    vibrator \
-    wfd \
-    wlan
+TARGET_COMMON_QTI_COMPONENTS += all
 
 # Radio
 PRODUCT_PACKAGES += \
