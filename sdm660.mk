@@ -118,7 +118,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.hw=1 \
     debug.sf.recomputecrop=0 \
-    debug.sf.disable_client_composition_cache=1 \
     persist.hwc.mdpcomp.enable=true \
     vendor.display.disable_rotator_downscale=1
 
